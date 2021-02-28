@@ -63,6 +63,3 @@ Please consider citing this paper if you use the code:
 }
 ```
 
-## License
-Oscar is released under the MIT license. See [LICENSE](LICENSE) for details. 
-
