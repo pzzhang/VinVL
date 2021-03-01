@@ -34,7 +34,7 @@ VinVL has achieved top-position in several VL leaderboards, including [Visual Qu
 
 ## Source code
 ### Pretrained Faster-RCNN model and feature extraction
-The pretrained X152-C4 object-attribute detection can be doanloaded [here](https://penzhanwu2.blob.core.windows.net/results/vinvl/od_models/vinvl_vg_x152c4.pth).
+The pretrained X152-C4 object-attribute detection can be downloaded [here](https://penzhanwu2.blob.core.windows.net/results/vinvl/od_models/vinvl_vg_x152c4.pth).
 With code from our [Scene Graph Benchmark Repo](https://github.com/microsoft/scene_graph_benchmark), one can extract features with following command:
 ```bash
 python tools/test_sg_net.py --config-file sgg_configs/vgattr/vinvl_x152c4.yaml TEST.IMS_PER_BATCH 2 MODEL.WEIGHT models/vinvl/vinvl_vg_x152c4.pth MODEL.ROI_HEADS.NMS_FILTER 1 MODEL.ROI_HEADS.SCORE_THRESH 0.2 DATA_DIR "../maskrcnn-benchmark-1/datasets1" TEST.IGNORE_BOX_REGRESSION True MODEL.ATTRIBUTE_ON True
