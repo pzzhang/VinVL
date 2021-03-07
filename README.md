@@ -1,4 +1,4 @@
-# VinVL: Making Visual Representations Matter in Vision-Language Models  
+# VinVL: Revisiting Visual Representations in Vision-Language Models  
 ## Updates
 02/28/2021: Project page built. <br/>
 
@@ -20,7 +20,7 @@ SoTA_S  |39.2 | 68.0|56.6 | 84.5|38.9 |29.2 |129.8 | 22.4 |   61.5 |  9.2   |  7
 SoTA_B  |54.0 | 80.8|70.0 | 91.1|40.5 |29.7 |137.6 | 22.8 |   86.58| 12.38  |  73.67   | 79.30   | 61.62   |
 SoTA_L  |57.5 | 82.8|73.5 | 92.2|41.7 |30.6 |140.0 | 24.5 |     -  |   -    |  74.93   | 81.47   |   -     |
 -----   |---  |---  |---  |---  |---  |---  |---   |---   |---     |---     |---       |---      |---      |
-VinVL_B |58.1 | 83.2|74.6 | 92.6|40.9 |30.9 |140.4 | 25.1 |   92.46| 13.07  |  76.12   | 83.08   | 64.65   |
+VinVL_B |58.1 | 83.2|74.6 | 92.6|40.9 |30.9 |140.6 | 25.1 |   92.46| 13.07  |  76.12   | 83.08   | 64.65   |
 VinVL_L |58.8 | 83.5|75.4 | 92.9|41.0 |31.1 |140.9 | 25.2 |     -  |   -    |  76.62   | 83.98   |   -     |
 gain    | 1.3 |  0.7| 1.9 |  0.6| -0.7| 0.5 | 0.9  | 0.7  |    5.9 |  0.7   |   1.69   |  2.51   |  1.48   |
 
@@ -30,7 +30,20 @@ t2i: text-to-image retrieval; i2t: image-to-text retrieval; IC: image captioning
 VinVL has achieved top-position in several VL leaderboards, including [Visual Question Answering (VQA)](https://competitions.codalab.org/competitions/3221#results), [Microsoft COOC Image Captioning](https://eval.ai/web/challenges/challenge-page/514/leaderboard/1386), [Novel Object Captioning (nocaps)](https://eval.ai/web/challenges/challenge-page/355/leaderboard/1011), and [Visual Commonsense Reasoning (VCR)](https://leaderboard.allenai.org/vcr/submissions/public).
 
 ## Comparison with image features from [bottom-up and top-down model](https://arxiv.org/abs/1707.07998) ([code](https://github.com/peteanderson80/bottom-up-attention)).
-<img src="docs/vinvl_panderson.PNG" width="650"> 
+We observe uniform improvements on seven VL tasks by replacing visual features from [bottom-up and top-down model](https://arxiv.org/abs/1707.07998) with ours.
+The NoCaps baseline is from [VIVO](https://arxiv.org/abs/2009.13682), and our results are obtained by directly replacing the visual features. The baselines for rest tasks are from [OSCAR](https://arxiv.org/abs/2004.06165), and our results are obtained by replacing the visual features and performing OSCAR+ pre-training. All models are BERT-Base size. As analyzed in Section 5.2 in the VinVL paper, the new visual features contributes 95% of the improvement.
+
+Task    | t2i | t2i | i2t | i2t | IC  | IC  |  IC  |  IC  | NoCaps | NoCaps |   VQA    |  NLVR2  |   GQA   |
+--------|-----|-----|-----|-----|-----|-----|------|------|--------|--------|----------|---------|---------|
+metric	| R@1 | R@5 | R@1 | R@5 | B@4 |  M  |  C   |   S  |    C   |    S   | test-std | test-P  | test-std|
+[bottom-up and top-down model](https://arxiv.org/abs/1707.07998)  |54.0 | 80.8|70.0 | 91.1|40.5 |29.7 |137.6 | 22.8 |   86.58| 12.38  |  73.16   | 78.07   | 61.62   |
+-----   |---  |---  |---  |---  |---  |---  |---   |---   |---     |---     |---       |---      |---      |
+VinVL (ours) |58.1 | 83.2|74.6 | 92.6|40.9 |30.9 |140.6 | 25.1 |   92.46| 13.07  |  75.95   | 83.08   | 64.65   |
+gain    | 4.1 |  2.4| 4.6 | 1.5| 0.4 | 1.2 | 3.0  | 2.3  |    5.9 |  0.7   |   2.79   |  4.71   |  3.03   |
+
+Please see the following two figures for visual comparison. 
+<img src="docs/Panderson_R101C4.PNG" width="650"> 
+<img src="docs/VinVL_X152C4.PNG" width="650"> 
 
 ## Source code
 ### Pretrained Faster-RCNN model and feature extraction
