@@ -54,6 +54,31 @@ python tools/test_sg_net.py --config-file sgg_configs/vgattr/vinvl_x152c4.yaml T
 ```
 The output feature will be encoded as base64. 
 
+For ease-of-use, we make pretrained features available for all pretraining datasets and downstream tasks. 
+Features are stored in tsv (tab-separated-values) format that can be used in [pretraining](oscar/datasets/oscar_tsv.py) and dowstream tasks like [COCO Image-Text Retrieval](oscar/run_retrieval.py).
+
+[COCO 2014 Train/Val Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+
+[COCO 2014 Test Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/coco2014test/)
+
+[COCO 2015 Test Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/coco2015test/)
+
+[GQA All Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/gqa_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+
+[NVLR2 Train/Del/Test Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/nlvr2_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
+
+[VCR Train/Test/Testv2 Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/vcr_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
+
+[VCR Train/Test/Testv2 Image Features with its provided bounding boxes](https://biglmdiag.blob.core.windows.net/vinvl/image_features/vcr_X152C4_frcnnbig2_exp168model_0060000model.roi_box_head.force_boxes_true/)
+
+[Flickr30k All Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/flickr30k_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+
+[Google Conceptual Captions Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/googlecc_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
+
+[SBU Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/sbu_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+
+[Open Images Detection Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/oi_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+
 ### Pretraind Oscar+ models and VL downstream tasks
 The code to produce all vision-language results (both pretraining and downstream task finetuning) can be found in our [OSCAR repo](https://github.com/microsoft/Oscar).
 One can find the model zoo for vision-language tasks [here](https://github.com/microsoft/Oscar/blob/master/MODEL_ZOO.md).
