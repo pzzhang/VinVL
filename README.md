@@ -54,6 +54,7 @@ python tools/test_sg_net.py --config-file sgg_configs/vgattr/vinvl_x152c4.yaml T
 ```
 The output feature will be encoded as base64. 
 
+### Pre-exacted Image Features
 For ease-of-use, we make pretrained features available for all pretraining datasets and downstream tasks. 
 Features are stored in tsv (tab-separated-values) format that can be used in [pretraining](oscar/datasets/oscar_tsv.py) and dowstream tasks like [COCO Image-Text Retrieval](oscar/run_retrieval.py).
 
@@ -82,6 +83,16 @@ Features are stored in tsv (tab-separated-values) format that can be used in [pr
 ### Pretraind Oscar+ models and VL downstream tasks
 The code to produce all vision-language results (both pretraining and downstream task finetuning) can be found in our [OSCAR repo](https://github.com/microsoft/Oscar).
 One can find the model zoo for vision-language tasks [here](https://github.com/microsoft/Oscar/blob/master/MODEL_ZOO.md).
+
+### Oscar+ pretraining corpus
+<img src="docs/pretrain_corpus.PNG" width="650"> 
+
+[Small corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_gqa.tsv)
+
+[Medium corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_gqa_oi.tsv)
+
+[Large corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_googlecc_gqa_sbu_oi.tsv)
+
 
 ## Citations
 Please consider citing this paper if you use the code:
