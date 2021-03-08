@@ -47,7 +47,7 @@ Please see the following two figures for visual comparison.
 ## Source code
 ### Pretrained Faster-RCNN model and feature extraction
 The pretrained X152-C4 object-attribute detection can be downloaded [here](https://penzhanwu2.blob.core.windows.net/results/vinvl/od_models/vinvl_vg_x152c4.pth).
-With code from our [Scene Graph Benchmark Repo](https://github.com/microsoft/scene_graph_benchmark), one can extract features with following command:
+With code from our [Scene Graph Benchmark Repo](https://github.com/microsoft/scene_graph_benchmark) (to be released soon), one can extract features with following command:
 ```bash
 python tools/test_sg_net.py --config-file sgg_configs/vgattr/vinvl_x152c4.yaml TEST.IMS_PER_BATCH 2 MODEL.WEIGHT models/vinvl/vinvl_vg_x152c4.pth MODEL.ROI_HEADS.NMS_FILTER 1 MODEL.ROI_HEADS.SCORE_THRESH 0.2 DATA_DIR "../maskrcnn-benchmark-1/datasets1" TEST.IGNORE_BOX_REGRESSION True MODEL.ATTRIBUTE_ON True TEST.OUTPUT_FEATURE True
 ```
@@ -61,17 +61,7 @@ Please find the instructions to download them in [DOWNLOAD](DOWNLOAD.md).
 
 ### Pretraind Oscar+ models and VL downstream tasks
 The code to produce all vision-language results (both pretraining and downstream task finetuning) can be found in our [OSCAR repo](https://github.com/microsoft/Oscar).
-One can find the model zoo for vision-language tasks [here](https://github.com/microsoft/Oscar/blob/master/MODEL_ZOO.md).
-
-### Oscar+ pretraining corpus
-<img src="docs/pretrain_corpus.PNG" width="650"> 
-
-[Small corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_gqa.tsv)
-
-[Medium corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_gqa_oi.tsv)
-
-[Large corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_googlecc_gqa_sbu_oi.tsv)
-
+One can find the model zoo for vision-language tasks [here](https://github.com/microsoft/Oscar/blob/master/VinVL_MODEL_ZOO.md).
 
 ## Citations
 Please consider citing this paper if you use the code:
@@ -79,14 +69,14 @@ Please consider citing this paper if you use the code:
 @article{li2020oscar,
   title={Oscar: Object-Semantics Aligned Pre-training for Vision-Language Tasks},
   author={Li, Xiujun and Yin, Xi and Li, Chunyuan and Hu, Xiaowei and Zhang, Pengchuan and Zhang, Lei and Wang, Lijuan and Hu, Houdong and Dong, Li and Wei, Furu and Choi, Yejin and Gao, Jianfeng},
-  journal={arXiv preprint arXiv:2004.06165},
+  journal={ECCV 2020},
   year={2020}
 }
 
 @article{zhang2021vinvl,
   title={VinVL: Making Visual Representations Matter in Vision-Language Models},
   author={Zhang, Pengchuan and Li, Xiujun and Hu, Xiaowei and Yang, Jianwei and Zhang, Lei and Wang, Lijuan and Choi, Yejin and Gao, Jianfeng},
-  journal={arXiv preprint arXiv:2101.00529},
+  journal={CVPR 2021},
   year={2021}
 }
 ```

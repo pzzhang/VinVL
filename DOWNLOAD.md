@@ -25,30 +25,26 @@ Notice that all the links below are links to a folder. We recommend using the fo
 azcopy copy <folder-link> <target-address> --resursive"
 ```
 
-[COCO 2014 Train/Val Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+[COCO 2014 Train/Val Image Features (~50G)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
 
-[COCO 2014 Test Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/coco2014test/)
+[COCO 2014 Test Image Features (~16G)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/coco2014test/)
 
-[COCO 2015 Test Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/coco2015test/)
+[COCO 2015 Test Image Features (~32G)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/coco_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/coco2015test/)
 
-[GQA All Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/gqa_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+[GQA All Image Features (~62G)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/gqa_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
 
-[NVLR2 Train/Del/Test Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/nlvr2_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
+[NVLR2 Train/Del/Test Image Features (~28G)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/nlvr2_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
 
-[VCR Train/Test/Testv2 Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/vcr_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
+[Flickr30k All Image Features (~14G)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/flickr30k_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
 
-[VCR Train/Test/Testv2 Image Features with its provided bounding boxes](https://biglmdiag.blob.core.windows.net/vinvl/image_features/vcr_X152C4_frcnnbig2_exp168model_0060000model.roi_box_head.force_boxes_true/)
+[Google Conceptual Captions Image Features (Huge, ~960G, splitted into 12 chunks)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/googlecc_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
 
-[Flickr30k All Image Features](https://biglmdiag.blob.core.windows.net/vinvl/image_features/flickr30k_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+[SBU Image Features (Huge, ~280G, splitted into 4 chunks)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/sbu_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
 
-[Google Conceptual Captions Image Features (Huge, splitted into 12 chunks)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/googlecc_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/)
-
-[SBU Image Features (Huge, splitted into 4 chunks)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/sbu_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
-
-[Open Images Detection Image Features (Huge, splitted into 8 chunks)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/oi_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
+[Open Images Detection Image Features (Huge, ~530G, splitted into 8 chunks)](https://biglmdiag.blob.core.windows.net/vinvl/image_features/oi_X152C4_frcnnbig2_exp168model_0060000model.roi_heads.nm_filter_2_model.roi_heads.score_thresh_0.2/model_0060000/)
 
 
-## Oscar+ pretraining corpus
+### Oscar+ pretraining corpus
 <img src="docs/pretrain_corpus.PNG" width="650"> 
 
 [Small corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_gqa.tsv)
@@ -56,6 +52,11 @@ azcopy copy <folder-link> <target-address> --resursive"
 [Medium corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_gqa_oi.tsv)
 
 [Large corpus](https://biglmdiag.blob.core.windows.net/vinvl/pretrain_corpus/coco_flickr30k_googlecc_gqa_sbu_oi.tsv)
+
+We have tried our best to make sure that there is no data contamination between pretraining corpus and test sets for downstream tasks. 
+More specifically, we use two methods to achieve this. 
+(1) We use the COCO Image ID of Visual Genome and Flickr30k images.
+(2) For COCO, Visual Genome and Flickr30k, we calucate the pair-wise l2 norm between two images after resizing them into the same size.
 
 
 ## Oscar+ pretrained models and downstream tasks models
