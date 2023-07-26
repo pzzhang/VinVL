@@ -47,11 +47,11 @@ Please see the following two figures for visual comparison.
 
 ## Source code
 ### Pretrained Faster-RCNN model and feature extraction
-The pretrained X152-C4 object-attribute detection can be downloaded [here](https://penzhanwu2.blob.core.windows.net/sgg/sgg_benchmark/vinvl_model_zoo/vinvl_vg_x152c4.pth).
+The pretrained X152-C4 object-attribute detection can be downloaded [here](https://drive.google.com/file/d/1nvu8y4zZFbJqSqLdQClvMyzsbBeX-oaQ/view?usp=sharing).
 With code from our [Scene Graph Benchmark Repo](https://github.com/microsoft/scene_graph_benchmark), one can extract features with following command:
 ```bash
-# pretrained models at https://penzhanwu2.blob.core.windows.net/sgg/sgg_benchmark/vinvl_model_zoo/vinvl_vg_x152c4.pth
-# the associated labelmap at https://penzhanwu2.blob.core.windows.net/sgg/sgg_benchmark/vinvl_model_zoo/VG-SGG-dicts-vgoi6-clipped.json
+# pretrained models at https://drive.google.com/file/d/1nvu8y4zZFbJqSqLdQClvMyzsbBeX-oaQ/view?usp=sharing
+# the associated labelmap at https://drive.google.com/file/d/1M1nPtMPHS1GXx5HvKMMDxOksxQgwX14_/view?usp=sharing
 python tools/test_sg_net.py --config-file sgg_configs/vgattr/vinvl_x152c4.yaml TEST.IMS_PER_BATCH 2 MODEL.WEIGHT models/vinvl/vinvl_vg_x152c4.pth MODEL.ROI_HEADS.NMS_FILTER 1 MODEL.ROI_HEADS.SCORE_THRESH 0.2 DATA_DIR "../maskrcnn-benchmark-1/datasets1" TEST.IGNORE_BOX_REGRESSION True MODEL.ATTRIBUTE_ON True TEST.OUTPUT_FEATURE True
 ```
 The output feature will be encoded as base64. 
@@ -59,13 +59,13 @@ The output feature will be encoded as base64.
 One can also visualize the detections from the pretrained model with code from our [Scene Graph Benchmark Repo](https://github.com/microsoft/scene_graph_benchmark).
 ```bash
 # visualize VinVL object detection
-# pretrained models at https://penzhanwu2.blob.core.windows.net/sgg/sgg_benchmark/vinvl_model_zoo/vinvl_vg_x152c4.pth
-# the associated labelmap at https://penzhanwu2.blob.core.windows.net/sgg/sgg_benchmark/vinvl_model_zoo/VG-SGG-dicts-vgoi6-clipped.json
+# pretrained models at https://drive.google.com/file/d/1nvu8y4zZFbJqSqLdQClvMyzsbBeX-oaQ/view?usp=sharing
+# the associated labelmap at https://drive.google.com/file/d/1M1nPtMPHS1GXx5HvKMMDxOksxQgwX14_/view?usp=sharing
 python tools/demo/demo_image.py --config_file sgg_configs/vgattr/vinvl_x152c4.yaml --img_file ../maskrcnn-benchmark-1/datasets1/imgs/woman_fish.jpg --save_file output/woman_fish_x152c4.obj.jpg MODEL.WEIGHT models/vinvl/vinvl_vg_x152c4.pth MODEL.ROI_HEADS.NMS_FILTER 1 MODEL.ROI_HEADS.SCORE_THRESH 0.2 DATA_DIR "../maskrcnn-benchmark-1/datasets1" TEST.IGNORE_BOX_REGRESSION False
 
 # visualize VinVL object-attribute detection
-# pretrained models at https://penzhanwu2.blob.core.windows.net/sgg/sgg_benchmark/vinvl_model_zoo/vinvl_vg_x152c4.pth
-# the associated labelmap at https://penzhanwu2.blob.core.windows.net/sgg/sgg_benchmark/vinvl_model_zoo/VG-SGG-dicts-vgoi6-clipped.json
+# pretrained models at https://drive.google.com/file/d/1nvu8y4zZFbJqSqLdQClvMyzsbBeX-oaQ/view?usp=sharing
+# the associated labelmap at https://drive.google.com/file/d/1M1nPtMPHS1GXx5HvKMMDxOksxQgwX14_/view?usp=sharing
 python tools/demo/demo_image.py --config_file sgg_configs/vgattr/vinvl_x152c4.yaml --img_file ../maskrcnn-benchmark-1/datasets1/imgs/woman_fish.jpg --save_file output/woman_fish_x152c4.attr.jpg --visualize_attr MODEL.WEIGHT models/vinvl/vinvl_vg_x152c4.pth MODEL.ROI_HEADS.NMS_FILTER 1 MODEL.ROI_HEADS.SCORE_THRESH 0.2 DATA_DIR "../maskrcnn-benchmark-1/datasets1" TEST.IGNORE_BOX_REGRESSION False
 ```
 
